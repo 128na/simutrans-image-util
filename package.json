@@ -1,0 +1,42 @@
+{
+  "name": "simutrans-image-util",
+  "version": "1.0.0",
+  "description": "Simutrans image utilities",
+  "keywords": [
+    "simutrans",
+    "image"
+  ],
+  "bugs": {
+    "url": "https://github.com/128na/simutrans-image-util/issues"
+  },
+  "homepage": "https://github.com/128na/simutrans-image-util#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "author": "128Na <simutrans.128na@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/jest": "^27.0.1",
+    "canvas": "^2.8",
+    "fs-extra": "^10",
+    "jest": "^27.1.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "src"
+    ]
+  }
+}
