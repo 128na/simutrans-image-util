@@ -2,7 +2,7 @@ define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
-     * replace target color to (r,g,b,0)
+     * replace target color to (0,0,0,0)
      */
     function eraseColor(canvas, targetColor) {
         if (targetColor === void 0) { targetColor = '255,0,0'; }
@@ -12,6 +12,7 @@ define(["require", "exports"], function (require, exports) {
         for (var i = 0; i < data.length; i += 4) {
             var color = [data[i], data[i + 1], data[i + 2]].join(',');
             if (color === targetColor) {
+                // r,g,b,0 will replace 0,0,0,0
                 data[i + 3] = 0;
             }
         }

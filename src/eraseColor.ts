@@ -1,7 +1,7 @@
 import { Canvas } from "canvas";
 
 /**
- * replace target color to (r,g,b,0)
+ * replace target color to (0,0,0,0)
  */
 export default function eraseColor(canvas: Canvas, targetColor = '255,0,0'): void {
   const ctx = canvas.getContext('2d');
@@ -11,6 +11,7 @@ export default function eraseColor(canvas: Canvas, targetColor = '255,0,0'): voi
     const color = [data[i], data[i + 1], data[i + 2]].join(',');
 
     if (color === targetColor) {
+      // r,g,b,0 will replace 0,0,0,0
       data[i + 3] = 0;
     }
   }
