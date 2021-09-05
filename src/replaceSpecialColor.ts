@@ -1,4 +1,4 @@
-import { Canvas } from "node_modules/canvas/types/index";
+import { Canvas } from "canvas";
 import SPECIAL_COLORS from "./specialColors";
 
 /**

@@ -1,4 +1,4 @@
-import { Canvas, createCanvas, Image } from "node_modules/canvas/types/index";
+import { Canvas, createCanvas, Image } from "canvas";
 
 /**
  * Split an image into tiles of specified size.

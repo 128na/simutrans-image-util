@@ -1,4 +1,4 @@
-import { Canvas, Image } from "node_modules/canvas/types/index";
+import { Canvas, Image } from "canvas";
 /**
  * Shifts the image across multiple tiles for dat specification.
  */
