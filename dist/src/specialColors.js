@@ -1,7 +1,7 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var SPECIAL_COLORS = [
+    const SPECIAL_COLORS = [
         '107,107,107',
         '155,155,155',
         '179,179,179',
