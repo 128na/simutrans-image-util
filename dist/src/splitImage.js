@@ -14,7 +14,7 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
+define(["require", "exports", "../node_modules/canvas/types/index"], function (require, exports, index_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
@@ -28,7 +28,7 @@ define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
         }
         for (var x = 0; x < width; x += size) {
             for (var y = 0; y < height; y += size) {
-                var canvas = (0, canvas_1.createCanvas)(size, size);
+                var canvas = (0, index_1.createCanvas)(size, size);
                 var ctx = canvas.getContext('2d');
                 ctx.drawImage(image, -x, -y);
                 callback(canvas, x, y);

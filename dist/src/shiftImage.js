@@ -14,7 +14,7 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
+define(["require", "exports", "../node_modules/canvas/types/index"], function (require, exports, index_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
@@ -29,7 +29,7 @@ define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
         }
         var w = outputSize * (n + 1) * 2;
         var h = image.height;
-        var canvas = (0, canvas_1.createCanvas)(w, h);
+        var canvas = (0, index_1.createCanvas)(w, h);
         var ctx = canvas.getContext('2d');
         for (var index = 0; index <= n; index++) {
             var _a = __read([index * inputSize / 2, index * inputSize / 4, inputSize, h - index * inputSize / 4], 4), sx = _a[0], sy = _a[1], sw = _a[2], sh = _a[3];

@@ -1,4 +1,4 @@
-import { Canvas, createCanvas, Image } from "canvas";
+import { Canvas, createCanvas, Image } from "../node_modules/canvas/types/index";
 
 /**
  * Shifts the image across multiple tiles for dat specification.

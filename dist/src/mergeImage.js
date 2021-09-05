@@ -1,4 +1,4 @@
-define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
+define(["require", "exports", "../node_modules/canvas/types/index"], function (require, exports, index_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
@@ -6,7 +6,7 @@ define(["require", "exports", "canvas"], function (require, exports, canvas_1) {
      */
     function mergeImage(images) {
         // 画像サイズはすべて同じ想定
-        var canvas = (0, canvas_1.createCanvas)(maxWidth(images), maxHeight(images));
+        var canvas = (0, index_1.createCanvas)(maxWidth(images), maxHeight(images));
         var ctx = canvas.getContext('2d');
         images.map(function (img) { return ctx.drawImage(img, 0, 0); });
         return canvas;

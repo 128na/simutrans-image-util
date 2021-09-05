@@ -20,7 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.0.1",
-    "canvas": "^2.8",
+    "canvas": "^2.8.0",
     "jest": "^27.1.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",

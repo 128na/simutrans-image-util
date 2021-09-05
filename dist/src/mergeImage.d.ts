@@ -1,4 +1,4 @@
-import { Canvas, Image } from "canvas";
+import { Canvas, Image } from "../node_modules/canvas/types/index";
 /**
  * Merge images into canvas.
  */

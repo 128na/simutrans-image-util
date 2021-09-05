@@ -1,4 +1,4 @@
-import { Canvas } from "canvas";
+import { Canvas } from "../node_modules/canvas/types/index";
 /**
  * replace target color to (0,0,0,0)
  */
