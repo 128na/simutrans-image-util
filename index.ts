@@ -5,7 +5,7 @@ import shiftImage from './src/shiftImage';
 import splitImage from './src/splitImage';
 import specialColors from './src/specialColors';
 
-export default {
+export {
   eraseColor,
   mergeImage,
   replaceSpecialColor,
