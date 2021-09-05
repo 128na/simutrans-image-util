@@ -1,4 +1,4 @@
-define(["require", "exports", "../node_modules/canvas/types/index"], function (require, exports, index_1) {
+define(["require", "exports", "node_modules/canvas/types/index"], function (require, exports, index_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**

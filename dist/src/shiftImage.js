@@ -14,7 +14,7 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-define(["require", "exports", "../node_modules/canvas/types/index"], function (require, exports, index_1) {
+define(["require", "exports", "node_modules/canvas/types/index"], function (require, exports, index_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
