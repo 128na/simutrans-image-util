@@ -5,7 +5,7 @@ import { Canvas, createCanvas, Image } from "canvas";
  */
 export default function mergeImage(images: Image[]): Canvas {
   // 画像サイズはすべて同じ想定
-  const canvas = createCanvas(maxWidth(images), maxHeight(images));
+  const canvas = createCanvas(maxWidth(images), maxHeight(images), 'svg');
   const ctx = canvas.getContext('2d');
   images.map(img => ctx.drawImage(img, 0, 0));
 

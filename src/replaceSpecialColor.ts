@@ -4,7 +4,7 @@ import SPECIAL_COLORS from "./specialColors";
 /**
  * replace special color to (r+1,g+1,b+1)
  */
-export default function replaceSpecialColor(canvas: Canvas, specialColors = SPECIAL_COLORS, random = false): void {
+export default function replaceSpecialColor(canvas: Canvas, specialColors = SPECIAL_COLORS): void {
   const ctx = canvas.getContext('2d');
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const data = imageData.data;
@@ -13,9 +13,9 @@ export default function replaceSpecialColor(canvas: Canvas, specialColors = SPEC
 
     if (specialColors.includes(color)) {
       [data[i], data[i + 1], data[i + 2]] = [
-        Math.min(255, data[i] + (random ? 1 - Math.random() * 2 : 1)),
-        Math.min(255, data[i + 1] + (random ? 1 - Math.random() * 2 : 1)),
-        Math.min(255, data[i + 2] + (random ? 1 - Math.random() * 2 : 1)),
+        Math.min(255, data[i] - 1),
+        Math.min(255, data[i + 1] + 1),
+        Math.min(255, data[i + 2] + 1),
       ];
     }
   }
