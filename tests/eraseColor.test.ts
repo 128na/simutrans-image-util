@@ -1,5 +1,5 @@
 import { createCanvas, loadImage } from 'canvas';
-import eraseColor from '../src/eraseColor';
+import { eraseColor } from '../src/eraseColor';
 
 
 test('eraseColor', async () => {

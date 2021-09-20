@@ -1,5 +1,5 @@
 import { createCanvas, loadImage } from 'canvas';
-import replaceSpecialColor from '../src/replaceSpecialColor';
+import { replaceSpecialColor } from '../src/replaceSpecialColor';
 
 
 test('replaceSpecialColor', async () => {

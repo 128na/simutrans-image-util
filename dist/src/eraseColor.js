@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.handleEraseColor = exports.eraseColor = void 0;
 /**
  * replace target color to (0,0,0,0)
  */
@@ -10,10 +11,14 @@ function eraseColor(canvas, targetColor = '255,0,0') {
     for (let i = 0; i < data.length; i += 4) {
         const color = [data[i], data[i + 1], data[i + 2]].join(',');
         if (color === targetColor) {
-            // r,g,b,0 will replace 0,0,0,0
-            data[i + 3] = 0;
+            handleEraseColor(data, i);
         }
     }
     ctx.putImageData(imageData, 0, 0);
 }
-exports.default = eraseColor;
+exports.eraseColor = eraseColor;
+function handleEraseColor(data, i) {
+    // r,g,b,0 will replace 0,0,0,0
+    data[i + 3] = 0;
+}
+exports.handleEraseColor = handleEraseColor;
