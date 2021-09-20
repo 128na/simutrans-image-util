@@ -60,7 +60,6 @@ function handleImage(canvas: Canvas, options?: {
       handleEraseColor(data, i);
     }
     if (replaceSpecialColor && specialColors.includes(color)) {
-      console.log('handleSpecialColor')
       handleSpecialColor(data, i);
     }
     if (eraseTransparent) {
