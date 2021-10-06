@@ -29,3 +29,25 @@ test('alpha > 127 should be remove alpha', async () => {
   expect([...data]).toEqual([0, 255, 0, 255]);
 });
 
+test('edge only', async () => {
+  const image = await loadImage('./tests/images/edge.png');
+  const canvas = createCanvas(image.width, image.height);
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(image, 0, 0);
+
+  eraseTransparent(canvas, 0.1, true);
+
+  const imageData = ctx.getImageData(0, 0, 7, 1);
+  const data = imageData.data;
+
+  expect([...data]).toEqual([
+    0, 0, 0, 0,
+    0, 0, 255, 255,
+    0, 0, 255, 255,
+    0, 0, 255, 96,
+    0, 0, 255, 255,
+    0, 0, 255, 255,
+    0, 0, 0, 0,
+  ]);
+});
+
