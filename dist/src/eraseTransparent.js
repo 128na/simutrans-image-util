@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleTransparent = exports.eraseTransparent = void 0;
+exports.eraseTransparent = eraseTransparent;
+exports.handleTransparent = handleTransparent;
 /**
  * replace transparent color to (231,255,255,255)
  */
@@ -14,7 +15,6 @@ function eraseTransparent(canvas, threshold = 0.5, edgeOnly = false) {
     }
     ctx.putImageData(imageData, 0, 0);
 }
-exports.eraseTransparent = eraseTransparent;
 function handleTransparent(data, i, threshold, edgeOnly = false) {
     if (edgeOnly) {
         const isEdge = data[i - 1] === 0 || data[i + 7] === 0;
@@ -35,4 +35,3 @@ function handleTransparent(data, i, threshold, edgeOnly = false) {
     }
     data[i + 3] = 255;
 }
-exports.handleTransparent = handleTransparent;

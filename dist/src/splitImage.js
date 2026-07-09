@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = splitImage;
 const canvas_1 = require("canvas");
 /**
  * Split an image into tiles of specified size.
@@ -18,4 +19,3 @@ function splitImage(image, size = 128, callback) {
         }
     }
 }
-exports.default = splitImage;
