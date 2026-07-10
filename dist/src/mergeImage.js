@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mergeImage = void 0;
+exports.mergeImage = mergeImage;
 const canvas_1 = require("canvas");
 const eraseColor_1 = require("./eraseColor");
 const eraseTransparent_1 = require("./eraseTransparent");
@@ -22,7 +22,6 @@ function mergeImage(images, options) {
     }
     return canvas;
 }
-exports.mergeImage = mergeImage;
 function maxWidth(images) {
     return images.reduce((max, current) => Math.max(max, current.width), 0);
 }

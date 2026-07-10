@@ -1,3 +1,4 @@
+import { test, expect } from '@jest/globals';
 import { createCanvas, loadImage } from 'canvas';
 import { mergeImage } from '../src/mergeImage';
 

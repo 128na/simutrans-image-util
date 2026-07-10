@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = shiftImage;
 const canvas_1 = require("canvas");
 /**
  * Shifts the image across multiple tiles for dat specification.
@@ -25,4 +26,3 @@ function shiftImage(image, inputSize = 128, outputSize = 256) {
     }
     return canvas;
 }
-exports.default = shiftImage;

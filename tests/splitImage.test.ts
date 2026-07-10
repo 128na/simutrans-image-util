@@ -1,3 +1,4 @@
+import { test, expect } from '@jest/globals';
 import { loadImage } from 'canvas';
 import splitImage from '../src/splitImage';
 
